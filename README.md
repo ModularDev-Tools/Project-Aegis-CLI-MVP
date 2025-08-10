@@ -1,69 +1,105 @@
-Praximous-Aegis-CLI is a command-line ritual designed to scan your codebase, detect its language and dependencies, and generate essential security documentation tailored to your tech stack. Whether you're launching a solo project or overseeing a distributed team, this tool automates the first—and often overlooked—layer of good governance.
-Table of Contents
- * Disclaimer
- * Features
- * Installation
- * Usage
- * Generated Files Breakdown
- * Premium Expansion
- * Attribution & Community
- * Roadmap
- * License
-Disclaimer
-This tool provides a foundational layer of security documentation and configuration. Praximous-Aegis-CLI is not a vulnerability scanner or a replacement for a comprehensive security strategy. It is designed to automate best practices and provide a starting point for security governance. Always conduct thorough code reviews and use dedicated security tools and services.
-⚙️ Features
- * 🔍 Language Detection
-   Scans project files to determine framework and ecosystem (supports Python, JavaScript; more coming soon).
- * 📜 Security Documentation Generator
-   Automatically generates:
-   * SECURITY.md: A detailed, customizable policy based on best practices.
-   * dependabot.yml: GitHub-ready config for dependency automation.
-   * SecureCodingGuide.md: Language-specific checklist to ward off common vulnerabilities.
- * 🧠 Self-Evolving Roadmap
-   Tracks upcoming feature drops, supported languages, and premium security expansions.
-🚀 Installation
-Install from PyPI:
-pip install praximous-aegis-cli
+## **Project: Aegis-CLI**
 
-Or for local development:
+A Simple Tool to Automate Security Docs
+
+#### **The Problem**
+
+Every good project needs a `SECURITY.md` file, a `dependabot.yml` config, and basic security guidelines. But let's be honest—nobody wants to write them. It's boring, repetitive, and easy to forget. So, most projects don't have them until it's too late.
+
+-----
+
+#### **The Solution**
+
+A simple command-line tool that does the grunt work for you. It scans your project, figures out what language and framework you're using (Python, JavaScript, etc.), and generates those essential security starter files.
+
+It turns a 15-minute chore into a 3-second command.
+
+-----
+
+#### **Disclaimer: Read This First**
+
+Let's be crystal clear: **this tool is a starting point, not a magic bullet.** It generates boilerplate security documentation based on best practices. It is **NOT** a vulnerability scanner, a security audit tool, or a replacement for a real security strategy. You still need to do the hard work of writing secure code and using dedicated security tools.
+
+-----
+
+#### **What It Does**
+
+  * **Detects Your Tech Stack:** Scans your project to figure out what you're building with (currently supports Python and JavaScript, more on the way).
+  * **Generates Essential Files:** Automatically creates a `/security` folder in your project with:
+      * `SECURITY.md`: A solid, customizable policy for how to report vulnerabilities.
+      * `dependabot.yml`: A ready-to-use GitHub Actions config to keep your dependencies updated.
+      * `SecureCodingGuide.md`: A language-specific checklist of common-sense security practices.
+
+-----
+
+#### **How to Install It**
+
+Get it from PyPI:
+
+```bash
+pip install praximous-aegis-cli
+```
+
+Or, if you want to hack on it yourself, clone the repo:
+
+```bash
 git clone https://github.com/JamesTheGiblet/Praximous-Aegis-CLI.git
 cd Praximous-Aegis-CLI
 pip install -e .
+```
 
-🧪 Usage
-Basic ritual invocation:
+-----
+
+#### **How to Use It**
+
+Just point it at your project directory.
+
+```bash
 aegis path/to/your/project
+```
 
-This will output:
- * A new /security/ folder in your project root.
- * Your SECURITY.md, dependabot.yml, and SecureCodingGuide.md tailored to the detected ecosystem.
-Optional flags:
---output custom/directory      # Set a custom folder for generated files
---verbose                      # See full scan report during generation
---dry-run                      # Run without writing files (preview mode)
+It will detect the language and generate the files in a new `/security` folder inside your project.
 
-📁 Generated Files Breakdown
-| File | Purpose |
-|---|---|
-| SECURITY.md | Outlines policy, contact info, supported versions, and tools. |
-| dependabot.yml | GitHub config for automated updates and vulnerability alerts. |
-| SecureCodingGuide.md | Framework-specific checklist to support clean, secure builds. |
-✨ Premium Expansion
-The Praximous Aegis Roadmap is an advanced builder’s guide to securing your project across its lifecycle. Available soon via jamesthegiblet.co.uk:
- * Industry-grade compliance checklists
- * Penetration testing templates
- * SDLC integration strategies
- * Security culture blueprints
-Join the waitlist or become a supporter to unlock deeper layers of defense and mythic mastery.
-📣 Attribution & Community
-Crafted by James the Giblet—digital architect and mythic builder.
-Open-source license applies to this tool and generated files. Respect the ritual, fork with clarity.
-Contributors welcome: create PRs with modular additions, clean commits, and glyph-rich documentation.
-🧭 Roadmap
-Next releases will include:
- * Support for more languages (e.g., Java, Go, Rust)
- * Optional integration with Snyk or OSV
- * Discord-powered contributor rituals
- * Dynamic README customization
-🕊️ License
-Licensed under the Praximous Ritual License (PRL) v1.0. Fork freely, but attribute mythic lineage.
+**Optional Flags:**
+
+  * `--output custom/directory`: Put the generated files somewhere else.
+  * `--verbose`: See the full scan report as it runs.
+  * `--dry-run`: See what it *would* do without actually writing any files.
+
+-----
+
+#### **What You Get**
+
+| File                   | Purpose                                                     |
+|:-----------------------|:------------------------------------------------------------|
+| `SECURITY.md`          | A clear policy on how to responsibly disclose vulnerabilities. |
+| `dependabot.yml`       | A config for GitHub's Dependabot to automate dependency updates. |
+| `SecureCodingGuide.md` | A checklist of best practices for the detected language.     |
+
+-----
+
+#### **Want to Go Deeper? (The Paid Guide)**
+
+The free tool gets you started with the basics. But if you want to learn about industry-grade security strategies, penetration testing, and building a secure development lifecycle (SDLC), I'm putting together a comprehensive guide.
+
+It's for serious builders who want to move beyond the fundamentals. You can find out more at **jamesthegiblet.co.uk**.
+
+-----
+
+#### **The Roadmap**
+
+**Perfect is the imaginary friend of never shipped**, but here's what's next:
+
+  * Support for more languages (Java, Go, Rust).
+  * Optional integration with tools like Snyk or OSV.
+  * Better dynamic customization of the generated files.
+
+-----
+
+#### **License**
+
+This is licensed under the **MIT License**.
+
+I had a custom license written up ("Praximous Ritual License"), but honestly, they're a pain and just scare people off. Just use the tool, build on it, do what you want.
+
+Stop neglecting the basics. **The code is the proof**, and good security docs are part of that proof.
