@@ -31,8 +31,8 @@ def empty_project(temp_project_dir):
 @pytest.fixture
 def mock_templates():
     """Mock template files for testing"""
-    templates_dir = Path(__file__).parent.parent / 'templates'
-    templates_dir.mkdir(exist_ok=True)
+    templates_dir = Path(__file__).parent.parent / 'src' / 'aegis_cli' / 'templates'
+    templates_dir.mkdir(exist_ok=True, parents=True)
     
     original_contents = {}
     mock_files = {

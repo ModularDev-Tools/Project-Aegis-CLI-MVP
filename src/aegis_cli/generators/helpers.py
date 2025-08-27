@@ -17,7 +17,7 @@ def generate_from_template(template_name: str, output_path: Path, context: dict)
         True if the file was generated successfully, False otherwise.
     """
     try:
-        template_dir = Path(__file__).resolve().parent.parent.parent.parent / 'templates'
+        template_dir = Path(__file__).resolve().parent.parent / 'templates'
         template_file = template_dir / template_name
 
         if not template_file.exists():

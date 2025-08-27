@@ -39,7 +39,7 @@ def test_generate_security_files_partial_failure(js_project, mock_templates):
     output_dir.mkdir()
     
     # Remove one template to cause partial failure
-    template_path = Path(__file__).parent.parent.parent / 'templates' / 'SECURITY.md.j2'
+    template_path = Path(__file__).parent.parent.parent / 'src' / 'aegis_cli' / 'templates' / 'SECURITY.md.j2'
     if template_path.exists():
         template_path.unlink()
     

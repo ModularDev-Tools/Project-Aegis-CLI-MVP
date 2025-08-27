@@ -36,8 +36,8 @@ test = [
     "pytest>=7.0.0",
 ]
 
-[tool.setuptools] 
-include-package-data = true
+[tool.setuptools.package-data]
+aegis_cli = ["templates/*.j2"]
 
 [project.scripts]
 aegis = "aegis_cli.cli:cli"

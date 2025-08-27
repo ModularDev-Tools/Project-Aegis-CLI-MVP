@@ -1,1 +1,1 @@
-recursive-include templates *.j2
+recursive-include src/aegis_cli/templates *.j2
