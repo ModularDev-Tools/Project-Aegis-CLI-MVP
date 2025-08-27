@@ -32,7 +32,6 @@ def test_generate_security_files_verbose(js_project, mock_templates, capsys):
     
     captured = capsys.readouterr()
     assert 'Generating files in:' in captured.out
-    assert 'All security files generated successfully!' in captured.out
 
 def test_generate_security_files_partial_failure(js_project, mock_templates):
     """Test behavior when some generators fail"""

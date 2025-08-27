@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "praximous-aegis-cli"
 version = "0.1.0"
 description = "Automate security documentation for your projects"
-readme = "README.md"
+readme = "README.md" # Make sure to create this file!
 authors = [{ name = "JamesTheGiblet", email = "your@email.com" }]
 license = { text = "MIT" }
 classifiers = [
@@ -17,10 +17,22 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
 ]
+keywords = ["security", "documentation", "automation", "cli", "devsecops"]
+
+[project.urls]
+Homepage = "https://github.com/JamesTheGiblet/Project-Aegis-CLI"
+Repository = "https://github.com/JamesTheGiblet/Project-Aegis-CLI"
+Issues = "https://github.com/JamesTheGiblet/Project-Aegis-CLI/issues"
+
 
 dependencies = [
     "click>=8.0.0",
     "Jinja2>=3.0.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
 ]
 
 [tool.setuptools] 
