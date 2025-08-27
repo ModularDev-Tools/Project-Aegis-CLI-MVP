@@ -1,0 +1,17 @@
+version: 2
+updates:
+{% if language == 'python' %}
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+{% elif language == 'javascript' %}
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+{% endif %}
+
+# To add more ecosystems, see: https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
