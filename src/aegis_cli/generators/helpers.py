@@ -1,6 +1,11 @@
 from pathlib import Path
 import jinja2
 import logging
+try:
+    from importlib import resources
+except ImportError:
+    # Python 3.8 compatibility
+    import importlib_resources as resources
 
 logger = logging.getLogger(__name__)
 
@@ -17,16 +22,17 @@ def generate_from_template(template_name: str, output_path: Path, context: dict)
         True if the file was generated successfully, False otherwise.
     """
     try:
-        template_dir = Path(__file__).resolve().parent.parent / 'templates'
-        template_file = template_dir / template_name
+        # Use importlib.resources for reliable template access
+        try:
+            # Python 3.9+
+            template_files = resources.files('aegis_cli') / 'templates'
+            template_content = (template_files / template_name).read_text(encoding='utf-8')
+        except AttributeError:
+            # Python 3.8 fallback
+            with resources.open_text('aegis_cli.templates', template_name) as f:
+                template_content = f.read()
 
-        if not template_file.exists():
-            logger.error(f"Template file not found: {template_file}")
-            return False
-
-        with open(template_file, 'r', encoding='utf-8') as f:
-            template = jinja2.Template(f.read(), undefined=jinja2.StrictUndefined)
-
+        template = jinja2.Template(template_content, undefined=jinja2.StrictUndefined)
         content = template.render(**context)
 
         output_path.parent.mkdir(parents=True, exist_ok=True)

@@ -9,9 +9,8 @@ description = "Automate security documentation for your projects"
 readme = "README.md"
 requires-python = ">=3.8"
 authors = [{ name = "JamesTheGiblet" }]
-license = { text = "MIT" }
+license = "MIT"
 classifiers = [
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
@@ -20,21 +19,23 @@ classifiers = [
 ]
 keywords = ["security", "documentation", "automation", "cli", "devsecops"]
 
-[project.urls]
-Homepage = "https://github.com/JamesTheGiblet/Project-Aegis-CLI"
-Repository = "https://github.com/JamesTheGiblet/Project-Aegis-CLI"
-Issues = "https://github.com/JamesTheGiblet/Project-Aegis-CLI/issues"
-
-
 dependencies = [
     "click>=8.0.0",
     "Jinja2>=3.0.0",
 ]
 
+[project.urls]
+Homepage = "https://github.com/JamesTheGiblet/Project-Aegis-CLI"
+Repository = "https://github.com/JamesTheGiblet/Project-Aegis-CLI"
+Issues = "https://github.com/JamesTheGiblet/Project-Aegis-CLI/issues"
+
 [project.optional-dependencies]
 test = [
     "pytest>=7.0.0",
 ]
+
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.setuptools.package-data]
 aegis_cli = ["templates/*.j2"]
