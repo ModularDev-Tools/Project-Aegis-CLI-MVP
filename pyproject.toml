@@ -6,8 +6,9 @@ build-backend = "setuptools.build_meta"
 name = "praximous-aegis-cli"
 version = "0.1.0"
 description = "Automate security documentation for your projects"
-readme = "README.md" # Make sure to create this file!
-authors = [{ name = "JamesTheGiblet", email = "your@email.com" }]
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{ name = "JamesTheGiblet" }]
 license = { text = "MIT" }
 classifiers = [
     "License :: OSI Approved :: MIT License",
