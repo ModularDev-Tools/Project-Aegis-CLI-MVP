@@ -1,5 +1,4 @@
 LICENSE
-MANIFEST.in
 README.md
 pyproject.toml
 src/aegis_cli/__init__.py
@@ -13,9 +12,10 @@ src/aegis_cli/generators/dependabot_yml.py
 src/aegis_cli/generators/helpers.py
 src/aegis_cli/generators/secure_coding_guide.py
 src/aegis_cli/generators/security_md.py
+src/aegis_cli/templates/SECURITY.md.j2
+src/aegis_cli/templates/SecureCodingGuide.md.j2
+src/aegis_cli/templates/dependabot.yml.j2
 src/aegis_cli/utils/__init__.py
-src/aegis_cli/utils/file_ops.py
-src/aegis_cli/utils/logger.py
 src/praximous_aegis_cli.egg-info/PKG-INFO
 src/praximous_aegis_cli.egg-info/SOURCES.txt
 src/praximous_aegis_cli.egg-info/dependency_links.txt

@@ -22,15 +22,8 @@ def generate_from_template(template_name: str, output_path: Path, context: dict)
         True if the file was generated successfully, False otherwise.
     """
     try:
-        # Use importlib.resources for reliable template access
-        try:
-            # Python 3.9+
-            template_files = resources.files('aegis_cli') / 'templates'
-            template_content = (template_files / template_name).read_text(encoding='utf-8')
-        except AttributeError:
-            # Python 3.8 fallback
-            with resources.open_text('aegis_cli.templates', template_name) as f:
-                template_content = f.read()
+        # Use importlib.resources for reliable template access across Python versions
+        template_content = resources.files('aegis_cli.templates').joinpath(template_name).read_text(encoding='utf-8')
 
         template = jinja2.Template(template_content, undefined=jinja2.StrictUndefined)
         content = template.render(**context)
