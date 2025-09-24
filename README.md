@@ -1,77 +1,56 @@
-# Project Aegis CLI
+<div align="center">
+  <h1>James 'The Giblet' Mavric</h1>
+  <p><strong>Self-Taught Polymath Engineer • Systems Architect • Independent Researcher</strong></p>
+  <p>I build sovereign, modular, and privacy-first systems to solve complex problems across both digital and physical domains.</p>
 
-[![Python CI](https://github.com/JamesTheGiblet/Project-Aegis-CLI/actions/workflows/python-ci.yml/badge.svg)](https://github.com/JamesTheGiblet/Project-Aegis-CLI/actions/workflows/python-ci.yml)
-[![PyPI version](https://badge.fury.io/py/praximous-aegis-cli.svg)](https://badge.fury.io/py/praximous-aegis-cli)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-A simple command-line tool to automate the generation of essential security documentation for your projects.
-
-## The Problem
-
-Every good project needs a `SECURITY.md` file, a `dependabot.yml` config, and basic security guidelines. But let's be honest—it’s a boring, repetitive chore that's easy to forget. So, most projects don't have them until it's too late.
-
-## The Solution
-
-`aegis` is a simple command-line tool that does the grunt work for you. It scans your project, figures out what language you're using, and generates those essential security starter files. It turns a 15-minute chore into a 3-second command.
-
-## Disclaimer: Read This First
-
-Let's be crystal clear: **this tool is a starting point, not a magic bullet.** It generates boilerplate security documentation based on best practices. It is **NOT** a vulnerability scanner, a security audit tool, or a replacement for a real security strategy. You still need to do the hard work of writing secure code and using dedicated security tools.
-
-## Features
-
-* **Language Detection**: Scans your project to figure out what you're building with (currently supports Python and JavaScript).
-* **Generates Essential Files**: Automatically creates the following from best-practice templates:
-  * `.github/dependabot.yml`: A ready-to-use config to keep your dependencies updated via GitHub.
-  * `security/SECURITY.md`: A solid, customizable policy for how to report vulnerabilities.
-  * `security/SecureCodingGuide.md`: A language-specific checklist of common-sense security practices.
-* **Safe and Customizable**: Use the `--dry-run` flag to preview changes and `--output` to specify a custom directory.
-
-## Installation
-
-Install from PyPI:
-
-```bash
-pip install praximous-aegis-cli
-```
-
-Or, to contribute, clone the repo and install in editable mode:
-
-```bash
-git clone https://github.com/JamesTheGiblet/Project-Aegis-CLI.git
-cd Project-Aegis-CLI
-pip install -e .[test]
-```
-
-## How to Use It
-
-Navigate to your project directory and run the command. `aegis` will detect the language and generate the files.
-
-```bash
-aegis /path/to/your/project
-```
-
-### Options
-
-* `--output <directory>`: Put the generated `SECURITY.md` and `SecureCodingGuide.md` files somewhere else.
-* `--verbose`: See the full scan report as it runs.
-* `--dry-run`: See what the tool would do without actually writing any files.
-
-## The Roadmap
-
-*Perfect is the enemy of shipped*, but here's what's next:
-
-* Support for more languages (Java, Go, Rust).
-* Optional integration with tools like Snyk or OSV.
-* Better dynamic customization of the generated files.
-
-## Want to Go Deeper?
-
-The free tool gets you started with the basics. But if you want to learn about industry-grade security strategies, penetration testing, and building a secure development lifecycle (SDLC), I'm putting together a comprehensive guide. You can find out more at jamesthegiblet.co.uk.
-
-## License
-
-This project is licensed under the MIT License.
+  <a href="https://github.com/ModularDev-tools">
+    <img src="https://img.shields.io/badge/My_Organization-ModularDev.tools-24292e?style=for-the-badge&logo=github" alt="ModularDev.tools GitHub Organization">
+  </a>
+</div>
 
 ---
-*Stop neglecting the basics. The code is the proof, and good security docs are part of that proof.*
+
+## 🚀 My Mission: Building the Tools for Digital Sovereignty
+
+I believe in building technology that empowers individuals. My work focuses on creating tools and systems that are private-by-design, user-owned, and built to last. Below is a selection of projects that serve as tangible evidence of this philosophy.
+
+## 🧰 Featured Projects & Research
+
+### 🛡️ **PROJECT: Aegis-CLI — Security Starter Kit**
+***A command-line tool that automates the creation of essential, boilerplate security files for any project.***
+
+* **Problem:** Creating basic security files like `SECURITY.md` and `dependabot.yml` is a repetitive chore that is frequently neglected by developers.
+* **Solution:** A Python-based CLI that detects the project's language and generates best-practice security starter files from templates.
+* **Outcome:** Compresses a 15-minute manual chore into a 3-second command, ensuring projects start with a solid security baseline.
+* **Skills:** `Python` `CLI Development` `Automation` `Developer Tooling` `Security Best Practices`
+
+---
+
+### 🧠 **PROJECT: DPMS — The Private AI Personality Blueprint**
+***A privacy-first AI platform that models human personality, running entirely on a local machine with zero cloud dependencies.***
+
+* **Problem:** Cloud-based AI tools force a trade-off between utility and privacy, requiring users to surrender sensitive personal data.
+* **Solution:** A local-first AI platform using Ollama that provides deep personality insights without data ever leaving the user's machine.
+* **Outcome:** Establishes a new paradigm for AI tools built on digital sovereignty, proving the viability of a privacy-centric, local-first model.
+* **Skills:** `Python` `AI/ML` `Local LLM Integration` `NLP` `Privacy-by-Design Architecture` `Streamlit` `SQLite`
+
+---
+
+### 🤖 **PROJECT: Johnny 5 "Number 3" — Advanced Robotics Platform**
+***An advanced, multi-brain robotics platform designed as a serious challenge for integrated engineering skills.***
+
+* **Problem:** Most robotics kits are too simplistic for serious builders who want to master the integration of complex, multi-domain systems.
+* **Solution:** A complete architectural blueprint for a modular, multi-brain robot, distributing tasks across multiple processors.
+* **Outcome:** A tangible proof of cross-domain mastery in mechanical, electronic, and software engineering, and an extensible platform for advanced AI/robotics research.
+* **Skills:** `Systems Integration` `Hardware Engineering` `Electronics` `Distributed Systems` `Power Management` `Technical Writing`
+
+---
+
+## 📊 My GitHub Stats
+
+<div align="center">
+
+![JamesTheGiblet's GitHub Stats](https://github-readme-stats.vercel.app/api?username=JamesTheGiblet&show_icons=true&theme=radical&hide_border=true&count_private=true)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=JamesTheGiblet&layout=compact&theme=radical&hide_border=true&count_private=true)
+
+</div>
