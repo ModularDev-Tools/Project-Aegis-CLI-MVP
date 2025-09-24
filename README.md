@@ -1,3 +1,5 @@
+# Project Aegis CLI
+
 [![Python CI](https://github.com/JamesTheGiblet/Project-Aegis-CLI/actions/workflows/python-ci.yml/badge.svg)](https://github.com/JamesTheGiblet/Project-Aegis-CLI/actions/workflows/python-ci.yml)
 [![PyPI version](https://badge.fury.io/py/praximous-aegis-cli.svg)](https://badge.fury.io/py/praximous-aegis-cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -33,27 +35,31 @@ Install directly from PyPI:
 pip install praximous-aegis-cli
 
 Or, to contribute, clone the repository and install in editable mode:
+
 git clone [https://github.com/JamesTheGiblet/Project-Aegis-CLI.git](https://github.com/JamesTheGiblet/Project-Aegis-CLI.git)
 cd Project-Aegis-CLI
 pip install -e .[test]
 
 How to Use It
-Navigate to your project's root directory and run the command:
+​Navigate to your project's root directory and run the command:
+
 aegis /path/to/your/project
 
 Options
- * --output <directory>: Specify a custom output directory for security files.
- * --verbose: See a detailed report of the scan as it runs.
- * --dry-run: Preview changes without writing any files to disk.
-The Roadmap
-The current version is a solid foundation. Future development is focused on:
- * Support for more languages (e.g., Java, Rust).
- * Optional integration with security tools like Snyk or OSV.
- * Greater customization of the generated template files.
-Want to Go Deeper?
-This free tool covers the basics. For industry-grade security strategies, penetration testing, and building a secure development lifecycle (SDLC), a comprehensive guide is in the works. Find out more at jamesthegiblet.co.uk.
-License
-This project is licensed under the MIT License.
-Stop neglecting the basics. Good security docs are proof of professional code.
+​--output <directory>: Specify a custom output directory for security files.
+​--verbose: See a detailed report of the scan as it runs.
+​--dry-run: Preview changes without writing any files to disk.
 
-.
+​The Roadmap
+​The current version is a solid foundation. Future development is focused on:
+​Support for more languages (e.g., Java, Rust).
+​Optional integration with security tools like Snyk or OSV.
+​Greater customization of the generated template files.
+
+​Want to Go Deeper?
+​This free tool covers the basics. For industry-grade security strategies, penetration testing, and building a secure development lifecycle (SDLC), a comprehensive guide is in the works.
+​License
+​This project is licensed under the MIT License.
+
+​Stop neglecting the basics. Good security docs are proof of professional code.
+
