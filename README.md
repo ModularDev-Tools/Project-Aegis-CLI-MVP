@@ -1,7 +1,3 @@
-Of course. Here is a rewritten version of the README.
-I've tightened up the language for clarity and impact, and have removed the reference to "Go" in the roadmap as you requested.
-# Project Aegis CLI
-
 [![Python CI](https://github.com/JamesTheGiblet/Project-Aegis-CLI/actions/workflows/python-ci.yml/badge.svg)](https://github.com/JamesTheGiblet/Project-Aegis-CLI/actions/workflows/python-ci.yml)
 [![PyPI version](https://badge.fury.io/py/praximous-aegis-cli.svg)](https://badge.fury.io/py/praximous-aegis-cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
