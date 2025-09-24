@@ -1,56 +1,63 @@
-<div align="center">
-  <h1>James 'The Giblet' Mavric</h1>
-  <p><strong>Self-Taught Polymath Engineer • Systems Architect • Independent Researcher</strong></p>
-  <p>I build sovereign, modular, and privacy-first systems to solve complex problems across both digital and physical domains.</p>
+Of course. Here is a rewritten version of the README.
+I've tightened up the language for clarity and impact, and have removed the reference to "Go" in the roadmap as you requested.
+# Project Aegis CLI
 
-  <a href="https://github.com/ModularDev-tools">
-    <img src="https://img.shields.io/badge/My_Organization-ModularDev.tools-24292e?style=for-the-badge&logo=github" alt="ModularDev.tools GitHub Organization">
-  </a>
-</div>
+[![Python CI](https://github.com/JamesTheGiblet/Project-Aegis-CLI/actions/workflows/python-ci.yml/badge.svg)](https://github.com/JamesTheGiblet/Project-Aegis-CLI/actions/workflows/python-ci.yml)
+[![PyPI version](https://badge.fury.io/py/praximous-aegis-cli.svg)](https://badge.fury.io/py/praximous-aegis-cli)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
----
+A simple CLI tool to automate the creation of essential security starter files for your projects.
 
-## 🚀 My Mission: Building the Tools for Digital Sovereignty
+## The Problem
 
-I believe in building technology that empowers individuals. My work focuses on creating tools and systems that are private-by-design, user-owned, and built to last. Below is a selection of projects that serve as tangible evidence of this philosophy.
+Every project needs a `SECURITY.md` file, `dependabot.yml` config, and basic security guidelines. But it’s a boring, repetitive chore that’s easy to neglect, leaving most projects without them until it's too late.
 
-## 🧰 Featured Projects & Research
+## The Solution
 
-### 🛡️ **PROJECT: Aegis-CLI — Security Starter Kit**
-***A command-line tool that automates the creation of essential, boilerplate security files for any project.***
+`aegis` is a command-line tool that handles the grunt work. It scans your project, detects the primary language, and generates essential security starter files from best-practice templates. It turns a 15-minute chore into a 3-second command.
 
-* **Problem:** Creating basic security files like `SECURITY.md` and `dependabot.yml` is a repetitive chore that is frequently neglected by developers.
-* **Solution:** A Python-based CLI that detects the project's language and generates best-practice security starter files from templates.
-* **Outcome:** Compresses a 15-minute manual chore into a 3-second command, ensuring projects start with a solid security baseline.
-* **Skills:** `Python` `CLI Development` `Automation` `Developer Tooling` `Security Best Practices`
+## Disclaimer: This is a Starting Point
 
----
+Let's be clear: **this tool is a starting point, not a magic bullet.** It generates boilerplate documentation and is **NOT** a vulnerability scanner, security audit tool, or a replacement for a comprehensive security strategy. You are still responsible for writing secure code and using dedicated security tools.
 
-### 🧠 **PROJECT: DPMS — The Private AI Personality Blueprint**
-***A privacy-first AI platform that models human personality, running entirely on a local machine with zero cloud dependencies.***
+## Features
 
-* **Problem:** Cloud-based AI tools force a trade-off between utility and privacy, requiring users to surrender sensitive personal data.
-* **Solution:** A local-first AI platform using Ollama that provides deep personality insights without data ever leaving the user's machine.
-* **Outcome:** Establishes a new paradigm for AI tools built on digital sovereignty, proving the viability of a privacy-centric, local-first model.
-* **Skills:** `Python` `AI/ML` `Local LLM Integration` `NLP` `Privacy-by-Design Architecture` `Streamlit` `SQLite`
+* **Language Detection**: Scans your project to identify the language (currently supports Python and JavaScript).
+* **Essential File Generation**: Creates the following from proven templates:
+    * `.github/dependabot.yml`: A ready-to-use config to keep dependencies updated via GitHub.
+    * `security/SECURITY.md`: A solid, customizable policy for vulnerability reporting.
+    * `security/SecureCodingGuide.md`: A language-specific checklist for secure coding practices.
+* **Safe & Customizable**: Use `--dry-run` to preview changes without writing files and `--output` to specify a custom directory.
 
----
+## Installation
 
-### 🤖 **PROJECT: Johnny 5 "Number 3" — Advanced Robotics Platform**
-***An advanced, multi-brain robotics platform designed as a serious challenge for integrated engineering skills.***
+Install directly from PyPI:
 
-* **Problem:** Most robotics kits are too simplistic for serious builders who want to master the integration of complex, multi-domain systems.
-* **Solution:** A complete architectural blueprint for a modular, multi-brain robot, distributing tasks across multiple processors.
-* **Outcome:** A tangible proof of cross-domain mastery in mechanical, electronic, and software engineering, and an extensible platform for advanced AI/robotics research.
-* **Skills:** `Systems Integration` `Hardware Engineering` `Electronics` `Distributed Systems` `Power Management` `Technical Writing`
+```bash
+pip install praximous-aegis-cli
 
----
+Or, to contribute, clone the repository and install in editable mode:
+git clone [https://github.com/JamesTheGiblet/Project-Aegis-CLI.git](https://github.com/JamesTheGiblet/Project-Aegis-CLI.git)
+cd Project-Aegis-CLI
+pip install -e .[test]
 
-## 📊 My GitHub Stats
+How to Use It
+Navigate to your project's root directory and run the command:
+aegis /path/to/your/project
 
-<div align="center">
+Options
+ * --output <directory>: Specify a custom output directory for security files.
+ * --verbose: See a detailed report of the scan as it runs.
+ * --dry-run: Preview changes without writing any files to disk.
+The Roadmap
+The current version is a solid foundation. Future development is focused on:
+ * Support for more languages (e.g., Java, Rust).
+ * Optional integration with security tools like Snyk or OSV.
+ * Greater customization of the generated template files.
+Want to Go Deeper?
+This free tool covers the basics. For industry-grade security strategies, penetration testing, and building a secure development lifecycle (SDLC), a comprehensive guide is in the works. Find out more at jamesthegiblet.co.uk.
+License
+This project is licensed under the MIT License.
+Stop neglecting the basics. Good security docs are proof of professional code.
 
-![JamesTheGiblet's GitHub Stats](https://github-readme-stats.vercel.app/api?username=JamesTheGiblet&show_icons=true&theme=radical&hide_border=true&count_private=true)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=JamesTheGiblet&layout=compact&theme=radical&hide_border=true&count_private=true)
-
-</div>
+.
