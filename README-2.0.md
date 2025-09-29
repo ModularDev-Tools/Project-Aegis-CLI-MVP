@@ -33,7 +33,40 @@ Version 2.0 expands on the solid foundation of the original release with key fea
 
 - **Automated Compliance:** Optional pre-commit hook to prevent commits if security files are missing.
 
-- **Safe & Customizable:** Use `--dry-run` to preview changes without writing files and `--output` to specify a custom directory.
+- **Safe & Customizable:** Use `--dry-run` to preview changes, `--output` to specify a custom directory, and `--language` to override language detection.
+
+## Usage
+
+### `aegis generate`
+
+Detects the project language and generates the essential security files.
+
+```bash
+aegis generate [PROJECT_PATH] [OPTIONS]
+```
+
+**Arguments:**
+
+- `[PROJECT_PATH]`: The path to your project. Defaults to the current directory.
+
+**Options:**
+
+- `--output, -o DIRECTORY`: Specify a custom output directory for security markdown files.
+- `--language, -l [python|javascript|java|rust]`: Force a specific language, ignoring detection.
+- `--dry-run`: Preview changes without writing any files to disk.
+- `--verbose, -v`: See a detailed report of the scan as it runs.
+
+### `aegis check`
+
+Checks if the essential security files are present in the project. Exits with a non-zero status code if files are missing, making it ideal for CI/CD pipelines.
+
+### `aegis install-hook`
+
+Installs a pre-commit Git hook to verify security files before each commit.
+
+### `aegis list-languages`
+
+Lists all the programming languages that Aegis can detect.
 
 ## Installation
 
@@ -41,7 +74,8 @@ Install directly from PyPI:
 
 ```bash
 pip install aegis-cli
-```text
+```
+
 Or, to contribute, clone the repository and install in editable mode:
 
 ```bash

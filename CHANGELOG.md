@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.0.0] - 2023-10-27
 
+## [2.0.1] - 2023-10-28
+
+### Added
+
+- **Language Override**: A new `--language` flag on the `generate` command allows users to force a specific language, bypassing detection.
+
+### Changed
+
+- **Updated Documentation**: The `README.md` has been updated with a comprehensive "Usage" section and details on the new `--language` flag.
+
+## [2.0.0] - 2023-10-27
+
 ### Added
 
 - **Expanded Language Support**: Aegis now detects and generates guides for **Java** and **Rust** projects, in addition to Python and JavaScript.

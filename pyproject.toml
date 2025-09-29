@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "aegis-cli"
-version = "2.0.0"
+version = "2.0.1"
 description = "A simple CLI tool to automate the creation of essential security starter files for your projects. Now with expanded language support and automated checks!"
 readme = "README.md"
 requires-python = ">=3.8"
