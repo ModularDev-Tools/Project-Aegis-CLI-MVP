@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "praximous-aegis-cli"
-version = "0.1.0"
+version = "2.1.0"
 description = "Automate security documentation for your projects"
 readme = "README.md"
 authors = [{ name = "JamesTheGiblet", email = "your@email.com" }]

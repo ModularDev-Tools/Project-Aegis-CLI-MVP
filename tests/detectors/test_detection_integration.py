@@ -12,6 +12,16 @@ def test_detect_language_python(python_project):
     result = detect_language(python_project)
     assert result == 'python'
 
+def test_detect_language_java(java_project):
+    """Test language detection for Java"""
+    result = detect_language(java_project)
+    assert result == 'java'
+
+def test_detect_language_rust(rust_project):
+    """Test language detection for Rust"""
+    result = detect_language(rust_project)
+    assert result == 'rust'
+
 def test_detect_language_none(empty_project):
     """Test language detection returns None for unknown projects"""
     result = detect_language(empty_project)

@@ -1,0 +1,48 @@
+# Secure Coding Guide: Rust
+
+This guide provides a checklist of best practices for writing secure Rust applications. Rust's safety guarantees prevent many common bugs, but secure software still requires diligence.
+
+## Best Practices Checklist
+
+### 🦀 Rust Security
+
+**Dependency Management:**
+- [ ] Regularly audit dependencies for security vulnerabilities using `cargo audit`.
+- [ ] Use `cargo-deny` to enforce policies on your dependency tree (e.g., disallow duplicate versions, certain licenses).
+- [ ] Keep dependencies updated to their latest stable versions with `cargo update`.
+- [ ] Vet new dependencies carefully. Check their maintenance status, issue tracker, and community reputation.
+
+**Unsafe Code:**
+- [ ] Avoid `unsafe` blocks whenever possible. Strive to write safe, idiomatic Rust.
+- [ ] When `unsafe` is necessary, keep the blocks small, well-documented, and thoroughly reviewed.
+- [ ] Clearly document the invariants that must be upheld by the caller to ensure memory safety.
+- [ ] Run tools like `miri` to detect undefined behavior in `unsafe` code during testing.
+
+**Input Validation & Parsing:**
+- [ ] Validate all untrusted input (from users, files, network).
+- [ ] Use robust parsing libraries like `serde` for deserialization. Be aware of the security implications of the data format (e.g., `serde_yaml` can be a source of DoS).
+- [ ] Use Rust's type system to your advantage. For example, create new types to represent validated data (e.g., `EmailAddress(String)`).
+
+**Error Handling:**
+- [ ] Use `Result<T, E>` for recoverable errors. Avoid using `panic!` in library code.
+- [ ] Use `thiserror` and `anyhow` to create clear, structured error types.
+- [ ] Do not expose sensitive information in error messages returned to users.
+
+**Cryptography:**
+- [ ] Do not implement cryptographic primitives yourself.
+- [ ] Use well-vetted, maintained crates like `ring`, `rust-crypto`, or `sodiumoxide`.
+
+## General Security Principles
+
+- [ ] **Principle of Least Privilege:** Grant only the permissions necessary.
+- [ ] **Defense in Depth:** Use multiple layers of security controls.
+- [ ] **Never Trust User Input:** Treat all external data as potentially malicious.
+
+## Resources
+
+- The Rust Security Advisory Database
+- Secure Rust Guidelines
+- The Rust Fuzz Book
+
+---
+*This guide was generated using Project Aegis CLI. Customize it for your project's specific needs.*

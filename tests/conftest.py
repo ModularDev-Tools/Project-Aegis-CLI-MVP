@@ -3,6 +3,7 @@ import tempfile
 import shutil
 from pathlib import Path
 from unittest.mock import Mock, patch
+import subprocess
 
 @pytest.fixture
 def temp_project_dir():
@@ -12,9 +13,30 @@ def temp_project_dir():
         yield temp_path
 
 @pytest.fixture
+def git_repo(temp_project_dir):
+    """Create a temporary git repository."""
+    git_dir = temp_project_dir
+    # Change to the temp dir to run git init
+    subprocess.run(["git", "init"], cwd=git_dir, check=True, capture_output=True)
+    return git_dir
+
+
+@pytest.fixture
 def js_project(temp_project_dir):
     """Create a JavaScript project structure"""
     (temp_project_dir / 'package.json').write_text('{}')
+    return temp_project_dir
+
+@pytest.fixture
+def java_project(temp_project_dir):
+    """Create a Java project structure"""
+    (temp_project_dir / 'pom.xml').write_text('<project></project>')
+    return temp_project_dir
+
+@pytest.fixture
+def rust_project(temp_project_dir):
+    """Create a Rust project structure"""
+    (temp_project_dir / 'Cargo.toml').write_text('[package]')
     return temp_project_dir
 
 @pytest.fixture

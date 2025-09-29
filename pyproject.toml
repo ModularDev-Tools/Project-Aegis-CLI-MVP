@@ -3,9 +3,9 @@ requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "praximous-aegis-cli"
-version = "0.1.0"
-description = "Automate security documentation for your projects"
+name = "aegis-cli"
+version = "2.0.0"
+description = "A simple CLI tool to automate the creation of essential security starter files for your projects. Now with expanded language support and automated checks!"
 readme = "README.md"
 requires-python = ">=3.8"
 authors = [{ name = "JamesTheGiblet" }]
@@ -16,8 +16,13 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+    "Topic :: Software Development",
+    "Topic :: Utilities",
 ]
-keywords = ["security", "documentation", "automation", "cli", "devsecops"]
+keywords = ["security", "documentation", "automation", "cli", "devsecops", "dependabot", "security.md"]
 
 dependencies = [
     "click>=8.0.0",
@@ -38,7 +43,7 @@ test = [
 where = ["src"]
 
 [tool.setuptools.package-data]
-aegis_cli = ["templates/*.j2"]
+aegis_cli = ["templates/**"]
 
 [project.scripts]
 aegis = "aegis_cli.cli:cli"

@@ -1,0 +1,27 @@
+#!/bin/sh
+# Aegis CLI pre-commit hook
+
+# This hook checks if essential security files are present before allowing a commit.
+# It was installed by `aegis install-hook`.
+
+FILES_TO_CHECK=(
+    ".github/dependabot.yml"
+    "security/SECURITY.md"
+    "security/SecureCodingGuide.md"
+)
+
+missing_files=0
+for file in "${FILES_TO_CHECK[@]}"; do
+    if [ ! -f "$file" ]; then
+        echo "❌ Security file missing: $file"
+        missing_files=1
+    fi
+done
+
+if [ $missing_files -eq 1 ]; then
+    echo "Commit aborted. Please run 'aegis generate' to create them."
+    exit 1
+fi
+
+echo "✅ Aegis security file check passed."
+exit 0

@@ -41,12 +41,10 @@ Install directly from PyPI:
 
 ```bash
 pip install aegis-cli
-```
-
+```text
 Or, to contribute, clone the repository and install in editable mode:
 
 ```bash
 git clone [https://github.com/JamesTheGiblet/Project-Aegis-CLI.git](https://github.com/JamesTheGiblet/Project-Aegis-CLI.git)
 cd Project-Aegis-CLI
 pip install -e .[test]
-```
